@@ -23,5 +23,14 @@ def filter_dict_enhanced(my_dict : dict):
     for k,v in my_dict.items():
         new_v = filter_dict(v, common_ids)
         my_dict[k] = new_v
-    return my_dict
+    return my_dict, common_ids
+
+def reinverse_dict(my_dict : dict, commond_ids : list):
+    new_dict = dict.fromkeys(commond_ids, '')
+    for k,v in new_dict.items():
+        temp_dict = dict.fromkeys(list(my_dict.keys()), '')
+        for k2,v2 in my_dict.items():
+            temp_dict[k2] = v2[k]
+        new_dict[k] = temp_dict
+    return new_dict
 
