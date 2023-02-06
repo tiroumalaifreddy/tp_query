@@ -28,7 +28,7 @@ L'application prend en entrée:
 En se plaçant à la racine du projet et en ayant les deux fichiers à la racine du projet (```documents.json``` et ```index.json```):
 
 ```python
-python3.8 main.py ---json_file_doc documents.json ---json_file_index index.json --query="Site Officiel" 
+python3.8 main.py --json_file_doc documents.json --json_file_index index.json --query="Site Officiel" 
 ```
 
 Un fichier json est alors crée à la racine:
